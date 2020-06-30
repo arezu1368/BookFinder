@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../assets/images/fav.ico" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/header.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/font.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../assets/css/book-card.css">
+    <title>Book Finder</title>
+</head>
+<body>
+   <div class="wrapper">
+
+       <header>
+           <div class="header-container">
+               <div class="logo">
+                   <img src="../assets/images/book-finder2.png" class="logo" alt="logo" />
+               </div>
+               <h1 class="search-title">
+                   <div class="search-icon" >
+                       <img src="../assets/images/search-icon.png" />
+                   </div>
+
+                   <span>   کتاب مور نظر خود را در این قسمت بیابید</span>
+                   <div class="title-end-shape"></div>
+               </h1>
+               <div class="search-container">
+                   <div class="search-fields">
+                       <div class="search-text-field">
+                           <input id="key" name="key"
+                                  placeholder="جستجو بر اساس عنوان ،نویسنده،مترجم، ناشر..."/>
+                           <i  id="search-btn" class="material-icons search-icon">search</i>
+                       </div>
+                   </div>
+
+               </div>
+           </div>
+
+       </header>
+       <main class="page-main">
+            <div class="list-items" id="list-items"></div>
+       </main>
+   </div>
+    <script  src="../assets/js/index.js"></script>
+   <script src="../assets/js/config.js"></script>
+   <script src="../assets/js/book-card.js"></script>
+   <!--models-->
+   <script src="../models/result-item.js"></script>
+   <script src="../models/volume.js"></script>
+   <script src="../assets/js/book-mng.js"></script>
+
+
+</body>
+</html>
