@@ -1,4 +1,4 @@
-class Volume {
+export class Volume {
     constructor() {
         this.title= "";
         this.authors = [];

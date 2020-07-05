@@ -1,4 +1,5 @@
 import {BookServices} from "./book-services.js";
+import {BookCard} from "./book-card.js";
 export const listItemsContainer = document.getElementById("list-items");
 const waiting = document.getElementById("waiting");
 export class Index {

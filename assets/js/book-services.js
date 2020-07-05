@@ -1,4 +1,7 @@
 import {BookCard} from "./book-card.js";
+import {ResultItem} from "../../models/result-item.js";
+import {Volume} from "../../models/volume.js";
+
 export class BookServices {
     search = (key) => {
         const url = `${baseUrl}?q=${key}&key=${apikey}`;
@@ -23,4 +26,16 @@ export class BookServices {
 
 
     }
+    // search = (key) => {
+    //     const url = `${baseUrl}?q=${key}&key=${apikey}`;
+    //     fetch(url)
+    //         .then((resp) => {return resp.json()})
+    //         .catch((error) => {
+    //             console.error('Error:', error);
+    //             return null;
+    //
+    //         })
+    //
+    //
+    // }
 }
