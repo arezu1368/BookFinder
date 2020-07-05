@@ -53,7 +53,7 @@
 .search-fields{
     flex: .6;
 }
-.search-text-field {
+.search-form {
     transition: all 1s;
     width: 90%;
     position: relative;

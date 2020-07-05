@@ -15,13 +15,5 @@ export class Index {
         const key = document.getElementById("key").value;
         const bookServices = new  BookServices();
         bookServices.search(key);
-        // for (const item of items) {
-        //     let resultItem = new ResultItem();
-        //     resultItem = item;
-        //     let volumeInfo = new Volume();
-        //     volumeInfo = resultItem.volumeInfo;
-        //     const bookCard = new BookCard(volumeInfo);
-        //     bookCard.createCard();
-        // }
     };
 }

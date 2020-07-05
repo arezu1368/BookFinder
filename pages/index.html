@@ -29,7 +29,7 @@
                </h1>
                <div class="search-container">
                    <div  class="search-fields">
-                       <form  id="search-form" class="search-text-field" onsubmit="event.preventDefault();">
+                       <form  id="search-form" class="search-form" onsubmit="event.preventDefault();">
                            <input  id="key" name="key"
                                   placeholder="جستجو بر اساس عنوان ،نویسنده،..."/>
                            <input type="submit" value="submit" hidden/>
@@ -46,13 +46,13 @@
        </main>
    </div>
    <script type="module" >
-       // document.addEventListener('DOMContentLoaded',function () {
-       //
-       // });
        import {Index} from "../assets/js/index.js"
-       const index= new Index();
-       document.getElementById("search-form").addEventListener('submit', index.searchBtnClick);
-       document.getElementById("search-btn").addEventListener('click', index.searchBtnClick)
+       document.addEventListener('DOMContentLoaded',function () {
+           const index= new Index();
+           document.getElementById("search-form").addEventListener('submit', index.searchBtnClick);
+           document.getElementById("search-btn").addEventListener('click', index.searchBtnClick)
+       });
+
    </script>
    <script src="../assets/js/config.js"></script>
    <!--models-->
