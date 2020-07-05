@@ -47,13 +47,18 @@
             <div class="list-items" id="list-items"></div>
        </main>
    </div>
-    <script  src="../assets/js/index.js"></script>
+   <script type="module" >
+       // document.addEventListener('DOMContentLoaded',function () {
+       //
+       // });
+       import {Index} from "../assets/js/index.js"
+       const index= new Index();
+       document.getElementById("search-btn").addEventListener('click', index.searchBtnClick)
+   </script>
    <script src="../assets/js/config.js"></script>
-   <script src="../assets/js/book-card.js"></script>
    <!--models-->
    <script src="../models/result-item.js"></script>
    <script src="../models/volume.js"></script>
-   <script src="../assets/js/book-mng.js"></script>
 
 
 </body>

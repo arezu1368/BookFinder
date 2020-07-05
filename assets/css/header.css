@@ -59,9 +59,9 @@
     position: relative;
     margin: 0 auto;
 }
-.search-text-field:hover{
-    width: 95%;
-}
+/*.search-text-field:hover{*/
+    /*width: 95%;*/
+/*}*/
 input{
     color: #333 !important;
     border: none !important;
@@ -79,7 +79,11 @@ input{
     font-weight: 600;
     left:0px;
     top: 25%;
+    background: transparent;
+    border:none;
+    outline:0px !important;
 }
+
 .search-container .search-icon:hover{
     color: #188480;
 }

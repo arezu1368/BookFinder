@@ -1,4 +1,5 @@
-class BookCard {
+import {listItemsContainer} from "./index.js"
+export class BookCard {
     constructor(volumeInfo) {
         this.title = volumeInfo.title;
         this._authors = volumeInfo.authors;
@@ -40,13 +41,12 @@ class BookCard {
                              ${this.authors}
                           </div>`
         }
-        if(this.description !== undefined) {
-            output = `${output}
-                           <div class="info-item">
-                             ${this.description}
-                          </div>`
-        }
-
+        // if(this.description !== undefined) {
+        //     output = `${output}
+        //                    <div class="info-item">
+        //                      ${this.description}
+        //                   </div>`
+        // }
         listItemsContainer.insertAdjacentHTML("beforeend",output);
     }
 }

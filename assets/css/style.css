@@ -12,10 +12,22 @@ main{
     flex-direction: row;
     justify-content: center;
 }
+#waiting{
+    display: none;
+}
+.d-block{
+    display: block !important;
+}
+.d-none{
+    display: none !important;
+}
 .list-items{
     display: flex;
-    flex-direction: column;
-    flex: .7;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex: .9;
+
 }
 .horizontal-container{
     display: flex;
