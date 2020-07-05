@@ -29,14 +29,12 @@
                </h1>
                <div class="search-container">
                    <div  class="search-fields">
-                       <div class="search-text-field">
+                       <form  id="search-form" class="search-text-field">
                            <input  id="key" name="key"
                                   placeholder="جستجو بر اساس عنوان ،نویسنده،مترجم، ناشر..."/>
-                           <!--<button type="submit" class="search-icon">-->
-                              <!---->
-                           <!--</button>-->
+                           <input type="submit" value="submit" hidden/>
                            <i id="search-btn"  class="material-icons search-icon">search</i>
-                       </div>
+                       </form>
                    </div>
 
                </div>
@@ -53,6 +51,7 @@
        // });
        import {Index} from "../assets/js/index.js"
        const index= new Index();
+       document.getElementById("search-form").addEventListener('submit', index.searchBtnClick);
        document.getElementById("search-btn").addEventListener('click', index.searchBtnClick)
    </script>
    <script src="../assets/js/config.js"></script>

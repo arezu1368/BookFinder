@@ -1,6 +1,7 @@
 import {BookCard} from "./book-card.js";
 export class BookServices {
     search = (key) => {
+        alert('search');
         const url = `${baseUrl}?q=${key}&key=${apikey}`;
         fetch(url)
             .then((resp) => resp.json())

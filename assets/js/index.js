@@ -11,6 +11,7 @@ export class Index {
         }
     };
     searchBtnClick = () => {
+        alert('ho');
         this.removeNodes();
         const key = document.getElementById("key").value;
         const bookServices = new  BookServices();
