@@ -13,6 +13,7 @@ export class BookServices {
                     volumeInfo = resultItem.volumeInfo;
                     const bookCard = new BookCard(volumeInfo);
                     bookCard.createCard();
+                    alert(bookCard.title);
                 }
 
             })
