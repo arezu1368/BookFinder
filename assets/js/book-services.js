@@ -1,41 +1,12 @@
-import {BookCard} from "./book-card.js";
-import {ResultItem} from "../../models/result-item.js";
-import {Volume} from "../../models/volume.js";
-
+import {Config} from "./config.js"
 export class BookServices {
-    search = (key) => {
-        const url = `${baseUrl}?q=${key}&key=${apikey}`;
-        fetch(url)
-            .then((resp) => resp.json())
-            .then(function(data) {
-                const items = data.items;
-                for (const item of items) {
-                    let resultItem = new ResultItem();
-                    resultItem = item;
-                    let volumeInfo = new Volume();
-                    volumeInfo = resultItem.volumeInfo;
-                    const bookCard = new BookCard(volumeInfo);
-                    bookCard.createCard();
-                }
-
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-
-            })
-
-
+    constructor() {
+        this.config = new Config();
     }
-    // search = (key) => {
-    //     const url = `${baseUrl}?q=${key}&key=${apikey}`;
-    //     fetch(url)
-    //         .then((resp) => {return resp.json()})
-    //         .catch((error) => {
-    //             console.error('Error:', error);
-    //             return null;
-    //
-    //         })
-    //
-    //
-    // }
+    search =async (key) => {
+        const url = `${this.config.baseUrl}?q=${key}&key=${this.config.apikey}`;
+        let response = await fetch(url);
+        let data = await response.json();
+        return data;
+    }
 }
