@@ -113,7 +113,7 @@
 /* Landscape tablets and medium desktops */
 @media (min-width: 992px) and (max-width: 1199px) {
     .book-card{
-        flex: 0 1 calc(25% - 30px);
+        flex: 0 1 calc(33.33% - 30px);
     }
 }
 
