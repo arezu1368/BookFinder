@@ -38,8 +38,7 @@ main{
     flex-direction: row;
     justify-content: flex-end;
     flex-wrap: wrap;
-    flex: .9;
-
+    flex:1;
 }
 .horizontal-container{
     display: flex;

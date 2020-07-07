@@ -35,6 +35,9 @@ export class Index {
                 this.removeNodes(messageBox);
             }, 3000);
 
+            this.hide(waiting);
+            this.hide(emptyList);
+
         }
     };
     showListItems = (res) => {
