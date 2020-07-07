@@ -36,7 +36,7 @@ main{
 .list-items{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
     flex-wrap: wrap;
     flex: .9;
 
@@ -94,7 +94,7 @@ main{
     margin: 60px;
 }
 #search-waiting img{
-    width: 200px;
+    width: 150px;
     -webkit-animation:spin 4s linear infinite;
     -moz-animation:spin 4s linear infinite;
     animation:spin 4s linear infinite;

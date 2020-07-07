@@ -69,4 +69,5 @@ export class Index {
     hide = function (elem) {
         elem.style.display = 'none';
     };
+
 }

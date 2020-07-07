@@ -1,4 +1,5 @@
 import {listItemsContainer} from "./index.js"
+import {StringUtils} from "./string-utils.js"
 export class BookCard {
     constructor(volumeInfo) {
         this.title = volumeInfo.title;
@@ -15,6 +16,7 @@ export class BookCard {
     createCard = () => {
         let listItem = document.createElement('div');
         listItem.setAttribute('class', 'book-card');
+        const stringUtils = new StringUtils();
         let imgSrc = this.image;
         if(this.image === undefined) {
             imgSrc = "../assets/images/no_img.png";
@@ -24,7 +26,7 @@ export class BookCard {
                              <img src="${imgSrc}" alt="${this.title}">
                            </div>
                             <div class="book-infoes">
-                            <h1 class="book-title">${this.title}</h1>`
+                            <h1 class="book-title">${stringUtils.truncate(this.title,50)}</h1>`
         if(this.publishedDate !== undefined) {
             output = `${output}  
                       <div class="info-item">
@@ -36,9 +38,9 @@ export class BookCard {
         }
         if(this._authors !== undefined) {
             output = `${output}
-                           <div class="info-item">
+                           <div class="info-item authors">
                             <span class='info-title'> نویسندگان :</span>
-                             ${this.authors}
+                             ${stringUtils.truncate(this.authors,70)}
                           </div>`
         }
         // if(this.description !== undefined) {
